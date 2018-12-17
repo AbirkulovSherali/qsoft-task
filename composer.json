@@ -1,0 +1,23 @@
+{
+    "name": "abirkulovsherali/task",
+    "description": "Тестовое задание на позицию Junior PHP разработчика",
+    "authors": [
+        {
+            "name": "Sherali",
+            "email": "abirkulovs@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "./tests"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^7.5"
+    }
+}
