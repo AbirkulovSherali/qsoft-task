@@ -19,7 +19,7 @@ class MarksInverter {
     {
         $this->posMatches = [];
         $pattern = '/[^A-Za-z0-9А-Яа-я\s]/u';
-        
+
         for ($i = 0; $i < count($this->str); $i++) {
             if (preg_match($pattern, $this->str[$i])) {
                 $this->posMatches[] = $i;
@@ -44,10 +44,11 @@ class MarksInverter {
 
         $this->savePosMatches();
         $posMatches = $this->posMatches;
+        $matchesCount = count($posMatches);
 
-        for ($i = 0; $i < (count($posMatches) / 2); $i++) {
-            $reversedPos = count($posMatches) - $i - 1;
-
+        for ($i = 0; $i < ($matchesCount / 2); $i++) {
+            $reversedPos = $matchesCount - $i - 1;
+            
             $tmp = $this->str[$posMatches[$i]];
             $this->str[$posMatches[$i]] = $this->str[$posMatches[$reversedPos]];
             $this->str[$posMatches[$reversedPos]] = $tmp;
