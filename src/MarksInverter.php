@@ -34,7 +34,7 @@ class MarksInverter {
      * @param string $str
      * @return string
      */
-    public function invert(string $str)
+    public function invert(string $str) : string
     {
         /**
          * Трюк для обхода мульбайтовой строки
